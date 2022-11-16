@@ -1,0 +1,22 @@
+@forward "./base/index";
+@use "./utils/index";
+@mixin important-text {
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  border: 1px solid blue;
+}
+body {
+  font-family: index.$myFont;
+  font-size: index.$myFontSize;
+  color: index.$myColor;
+}
+
+#about p {
+  @include important-text;
+  background-color: seagreen;
+}
+#contact p {
+  @include important-text;
+  background-color: DodgerBlue;
+}
